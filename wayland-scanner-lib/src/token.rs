@@ -4,6 +4,8 @@
 // and
 // https://github.com/dtolnay/syn/blob/362ee2d02df3f1b2e74c7b7a4cf2ed3c106404c9/src/lit.rs#L1327-L1388
 
+use proc_macro2 as proc_macro;
+
 /// Get the byte at offset idx, or a default of `b'\0'` if we're looking
 /// past the end of the input buffer.
 fn byte(s: &str, idx: usize) -> u8 {

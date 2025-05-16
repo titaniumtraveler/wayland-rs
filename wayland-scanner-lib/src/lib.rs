@@ -41,6 +41,7 @@ use std::{ffi::OsString, path::PathBuf};
 
 pub mod parse;
 pub mod protocol;
+pub mod util;
 
 mod c_interfaces;
 mod client_gen;
@@ -48,7 +49,6 @@ mod common;
 mod interfaces;
 mod server_gen;
 mod token;
-mod util;
 
 /// Proc-macro for generating low-level interfaces associated with an XML specification
 // #[proc_macro]

@@ -25,6 +25,12 @@ pub struct Interface {
     pub enums: Vec<Enum>,
 }
 
+impl Default for Interface {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl Interface {
     pub fn new() -> Interface {
         Interface {
@@ -45,6 +51,12 @@ pub struct Message {
     pub since: u32,
     pub description: Option<(String, String)>,
     pub args: Vec<Arg>,
+}
+
+impl Default for Message {
+    fn default() -> Self {
+        Self::new()
+    }
 }
 
 impl Message {
@@ -68,6 +80,12 @@ pub struct Arg {
     pub description: Option<(String, String)>,
     pub allow_null: bool,
     pub enum_: Option<String>,
+}
+
+impl Default for Arg {
+    fn default() -> Self {
+        Self::new()
+    }
 }
 
 impl Arg {
@@ -105,6 +123,12 @@ impl Enum {
     }
 }
 
+impl Default for Enum {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 #[derive(Clone, Debug)]
 pub struct Entry {
     pub name: String,
@@ -112,6 +136,12 @@ pub struct Entry {
     pub since: u16,
     pub description: Option<(String, String)>,
     pub summary: Option<String>,
+}
+
+impl Default for Entry {
+    fn default() -> Self {
+        Self::new()
+    }
 }
 
 impl Entry {
